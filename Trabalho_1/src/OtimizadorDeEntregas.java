@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -22,6 +17,7 @@ public class OtimizadorDeEntregas {
             System.out.println("Nenhum dado válido foi encontrado no arquivo ou o arquivo não existe. Encerrando.");
         } else {
             System.out.println("Tempos lidos do arquivo '" + nomeDoArquivo + "': " + String.valueOf(temposDeEntrega));
+            System.out.println("Numero de entregas = " + temposDeEntrega.size());
             System.out.println("--------------------------------------------------");
             OtimizadorDeEntregas otimizador = new OtimizadorDeEntregas();
             otimizador.encontrarSolucaoOtima(temposDeEntrega);
@@ -35,7 +31,7 @@ public class OtimizadorDeEntregas {
             while(leitor.hasNextInt()) {
                 tempos.add(leitor.nextInt());
             }
-        } catch (FileNotFoundException var7) {
+        } catch (FileNotFoundException erro) {
             System.err.println("ERRO: O arquivo '" + nomeArquivo + "' não foi encontrado!");
         }
 
