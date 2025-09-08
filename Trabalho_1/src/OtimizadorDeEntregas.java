@@ -40,9 +40,7 @@ public class OtimizadorDeEntregas {
 
     public void encontrarSolucaoOtima(List<Integer> temposDeEntrega) {
         this.buscarMelhorDivisao(0, temposDeEntrega, new ArrayList(), new ArrayList());
-        System.out.println("--- SOLUÇÃO ÓTIMA ENCONTRADA ---");
         System.out.println("O menor tempo possível para todas as entregas é: " + this.minTempoGlobal + " minutos.");
-        System.out.println("\nDivisão de trabalho que gera o tempo ótimo:");
         Collections.sort(this.melhorDivisaoMoto1);
         Collections.sort(this.melhorDivisaoMoto2);
         System.out.println("Entregas do Motoqueiro 1: " + String.valueOf(this.melhorDivisaoMoto1));
